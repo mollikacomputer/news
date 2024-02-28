@@ -6,9 +6,38 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import Stack from '@mui/material/Stack';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+// icons
+import FacebookIcon from '@mui/icons-material/Facebook';
+import Link from 'next/link';
+
+const navItems = [
+    {
+    route:"Home",
+    pathname:'/',
+    },
+    {
+    route:"Pages",
+    pathname:'/pages',
+    },
+    {
+    route:"Category",
+    pathname:'/category',
+    },
+    {
+    route:"News",
+    pathname:'/news',
+    },
+    {
+    route:"About",
+    pathname:'/about',
+    },
+    {
+    route:"Contact",
+    pathname:'/contact',
+    },
+];
 
 const Navbar =() => {
  
@@ -16,21 +45,34 @@ const Navbar =() => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+          <Box>
+            <h2>Logo</h2>
+          </Box>
+          <Box className="w-full text-center">
+            {navItems.map((item) => (
+              <Link key={item} href={item.pathname} >
+                <Button className="text-white">
+                    {item.route}
+                </Button>
+              </Link>
             ))}
           </Box>
-          <IconButton>
-                <FacebookIcon></FacebookIcon>
-          </IconButton>
+            <Box>
+                <Stack direction="row">
+                    <IconButton>
+                            <FacebookIcon></FacebookIcon>
+                    </IconButton>
+                    <IconButton>
+                            <FacebookIcon></FacebookIcon>
+                    </IconButton>
+                    <IconButton>
+                            <FacebookIcon></FacebookIcon>
+                    </IconButton>
+                    <IconButton>
+                            <FacebookIcon></FacebookIcon>
+                    </IconButton>
+                </Stack>
+            </Box>
         </Toolbar>
       </Container>
     </AppBar>
