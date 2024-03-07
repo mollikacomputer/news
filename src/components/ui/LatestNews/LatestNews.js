@@ -7,13 +7,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TopNewsImage from "@/assets/top-news.jpg";
-import Image from "next/Image";
+import Image from "next/image";
 const LatestNews = () => {
   return (
     <Box className="my-5">
       <Card sx={{ }}>
       <CardMedia>
-        <Image src={TopNewsImage} width="300" height="100" alt="Top News Image" />
+        <Image src={TopNewsImage} width="800" height="100" alt="Top News Image" />
       </CardMedia>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
