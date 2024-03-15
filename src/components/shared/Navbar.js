@@ -42,13 +42,13 @@ const navItems = [
 const Navbar =() => {
  
   return (
-    <AppBar position="static" className='bg-black'>
-      <Container maxWidth="xl">
+    <AppBar position="static" >
+      <Container maxWidth="xl" className='bg-black '>
         <Toolbar disableGutters>
           <Box>
             <h2>Logo</h2>
           </Box>
-          <Box className="w-full text-center">
+          <Box className="w-full text-center text-white">
             {navItems.map((item) => (
               <Link key={item} href={item.pathname} >
                 <Button className="text-white">
