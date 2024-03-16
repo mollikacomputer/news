@@ -13,6 +13,9 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
+    "mongodb": "^6.5.0",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.2.2",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
