@@ -1,4 +1,3 @@
-
 import LatestNews from "@/components/ui/LatestNews/LatestNews";
 import SideBar from "@/components/ui/SideBar/SideBar";
 import getUsers from "@/utils/getUsers";
@@ -16,7 +15,7 @@ const users = await getUsers();
         </Grid>
       </Grid>
     {
-      users.map((user)=> <p className="text-5xl"> {user.name} </p> )
+      users.map((user)=> <p key={user.id} className="text-5xl"> {user.name} </p> )
     }
     </div>
   );
