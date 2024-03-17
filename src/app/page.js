@@ -1,8 +1,10 @@
 
 import LatestNews from "@/components/ui/LatestNews/LatestNews";
 import SideBar from "@/components/ui/SideBar/SideBar";
+import getUsers from "@/utils/getUsers";
 import {Grid} from "@mui/material";
-const HomePage = () => {
+const HomePage = async() => {
+const users = await getUsers();
   return (
     <div>
       <Grid container spacing={2}>
@@ -13,6 +15,9 @@ const HomePage = () => {
           <SideBar/>
         </Grid>
       </Grid>
+    {
+      users.map((user)=> <p className="text-5xl"> {user.name} </p> )
+    }
     </div>
   );
 };

@@ -6,7 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 
@@ -26,6 +25,7 @@ import Image from "next/image";
    as this is a much longer line than what the container can support. `;
 
 const SideBar = () => {
+
     return (
     <Box className="mt-5">
         <Card sx={{ }}>
@@ -64,8 +64,6 @@ const SideBar = () => {
             <Typography noWrap>{message}</Typography>
           </Grid>
         </Grid>
-
-
         <Grid className='my-5' container wrap="nowrap" spacing={2}>
           <Grid item>
             <Avatar>W</Avatar>
@@ -74,7 +72,6 @@ const SideBar = () => {
             <Typography>{message}</Typography>
           </Grid>
         </Grid>
-
     </Box>
     );
 };

@@ -1,4 +1,7 @@
-export const getCategoryName = async () =>{
-    const res = await fetch(`https://link.com`)
-};
-return res.json();
+// import dbConnect from "../../config/dbConnect";
+
+// export const getCategoryName = async () =>{
+//     const res = await dbConnect.filter("categories");
+    
+// };
+// return res.json();
